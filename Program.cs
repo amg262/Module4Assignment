@@ -38,15 +38,12 @@ namespace Module4Assignment
                     {
                         oddNumbers++;
                     }
-                    
-                    
-                    
+
                     startNumber++;
                 }
             }
             else
             {
-
                 while (startNumber > endNumber)
                 {
                     int i = 0;
@@ -59,59 +56,6 @@ namespace Module4Assignment
                     }
                 }
 
-              
-                
-                // while (startNumber > endNumber)
-                // {
-                //
-                //     int i = 0;
-                //     Console.Write($"Invalid: Start: {startNumber} must be LESS than End: {endNumber}>");
-                //
-                //     Int32.TryParse(Console.ReadLine(), out i);
-                //
-                //     if (i >= startNumber)
-                //     {
-                //         endNumber = i;
-                //         
-                //         if (startNumber % 2 == 0)
-                //         {
-                //             evenNumbers++;
-                //         }
-                //         else
-                //         {
-                //             oddNumbers++;
-                //         }
-                //
-                //         if (endNumber % 2 == 0)
-                //         {
-                //             evenNumbers++;
-                //         }
-                //         else
-                //         {
-                //             oddNumbers++;
-                //         }
-                //     }
-                //
-                // }
-                
-                // if (startNumber % 2 == 0)
-                // {
-                //     evenNumbers++;
-                // }
-                // else
-                // {
-                //     oddNumbers++;
-                // }
-                //
-                // if (endNumber % 2 == 0)
-                // {
-                //     evenNumbers++;
-                // }
-                // else
-                // {
-                //     oddNumbers++;
-                // }
-
                 while (startNumber <= endNumber)
                 {
                     if (startNumber % 2 == 0)
@@ -122,13 +66,11 @@ namespace Module4Assignment
                     {
                         oddNumbers++;
                     }
-                    
-                    
-                    
+
                     startNumber++;
                 }
             }
-            
+
             Console.WriteLine($"Even numbers: {evenNumbers}");
             Console.WriteLine($"Odd numbers: {oddNumbers}");
         }
