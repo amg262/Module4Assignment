@@ -13,7 +13,7 @@ namespace Module4Assignment
             int evenNumbers = 0;
             double evenCalc = 0;
             double oddCalc = 0;
-
+            int valid = 0;
 
             Console.Write("Starting Number>");
             Int32.TryParse(Console.ReadLine(), out startNumber);
@@ -46,27 +46,87 @@ namespace Module4Assignment
             }
             else
             {
-                Console.WriteLine($"Invalid: Start: {startNumber} must be LESS than End: {endNumber}");
-                if (startNumber % 2 == 0)
+
+                while (startNumber > endNumber)
                 {
-                    evenNumbers++;
-                }
-                else
-                {
-                    oddNumbers++;
+                    int i = 0;
+                    Console.Write($"End number MUST be GREATER THAN {startNumber}>");
+                    Int32.TryParse(Console.ReadLine(), out i);
+
+                    if (i > startNumber)
+                    {
+                        endNumber = i;
+                    }
                 }
 
-                if (endNumber % 2 == 0)
-                {
-                    evenNumbers++;
-                }
-                else
-                {
-                    oddNumbers++;
-                }
+              
+                
+                // while (startNumber > endNumber)
+                // {
+                //
+                //     int i = 0;
+                //     Console.Write($"Invalid: Start: {startNumber} must be LESS than End: {endNumber}>");
+                //
+                //     Int32.TryParse(Console.ReadLine(), out i);
+                //
+                //     if (i >= startNumber)
+                //     {
+                //         endNumber = i;
+                //         
+                //         if (startNumber % 2 == 0)
+                //         {
+                //             evenNumbers++;
+                //         }
+                //         else
+                //         {
+                //             oddNumbers++;
+                //         }
+                //
+                //         if (endNumber % 2 == 0)
+                //         {
+                //             evenNumbers++;
+                //         }
+                //         else
+                //         {
+                //             oddNumbers++;
+                //         }
+                //     }
+                //
+                // }
+                
+                // if (startNumber % 2 == 0)
+                // {
+                //     evenNumbers++;
+                // }
+                // else
+                // {
+                //     oddNumbers++;
+                // }
+                //
+                // if (endNumber % 2 == 0)
+                // {
+                //     evenNumbers++;
+                // }
+                // else
+                // {
+                //     oddNumbers++;
+                // }
 
-                Console.WriteLine($"Even numbers: {evenNumbers}");
-                Console.WriteLine($"Odd numbers: {oddNumbers}");
+                while (startNumber <= endNumber)
+                {
+                    if (startNumber % 2 == 0)
+                    {
+                        evenNumbers++;
+                    }
+                    else
+                    {
+                        oddNumbers++;
+                    }
+                    
+                    
+                    
+                    startNumber++;
+                }
             }
             
             Console.WriteLine($"Even numbers: {evenNumbers}");
